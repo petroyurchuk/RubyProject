@@ -17,6 +17,8 @@
     display: block;
     }
     img {
+    width: 200px;
+    height: 200px;
     float: left;
     padding: 1em;
     margin-right: 1em;
@@ -26,6 +28,23 @@
     .price {
     font-size: 1.414em;
     }
+div.price {
+        display: inline;
+}
+button{
+background-color: #282;
+border-radius: 10px;
+border: solid thin #141;
+color: white;
+font-size: 0.8em;
+padding: 0.354em 1em;
+}
+button:hover {
+background-color: #141;
+font-size: 0.9em;
+}
     }
     }
     }
+    
+    
