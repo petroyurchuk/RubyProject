@@ -13,7 +13,6 @@ class ProductsTest < ApplicationSystemTestCase
   test "should create product" do
     visit products_url
     click_on "New product"
-
     fill_in "Description", with: @product.description
     fill_in "Image url", with: @product.image_url
     fill_in "Price", with: @product.price
@@ -43,5 +42,17 @@ class ProductsTest < ApplicationSystemTestCase
     click_on "Destroy this product", match: :first
 
     assert_text "Product was successfully destroyed"
+  end
+
+test "updating a Product" do
+  visit products_url
+  click_on "Edit", match: :first
+  fill_in "Description", with: @product.description
+  fill_in "Image url", with: @product.image_url
+  fill_in "Price", with: @product.price
+  fill_in "Title", with: "Karel The Robot in a Nutshell"
+  click_on "Update Product"
+  assert_text "Product was successfully updated"
+  click_on "Back"
   end
 end
