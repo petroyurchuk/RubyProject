@@ -1,50 +1,79 @@
 .carts {
     table {
-    border-collapse: collapse;
+        border-collapse: collapse;
     }
+
     td {
-    padding: 0.5em;
+        padding: 0.5em;
     }
+
     td.quantity {
-    white-space: nowrap;
+        white-space: nowrap;
     }
+
     td.quantity::after {
-    content: " ×";
+        content: " ×";
     }
+
     td.price {
-    font-weight: bold;
-    text-align: right;
+        font-weight: bold;
+        text-align: right;
     }
+
     tfoot {
-    th, th.price {
-    font-weight: bold;
-    padding-top: 1em;
+
+        th,
+        th.price {
+            font-weight: bold;
+            padding-top: 1em;
+        }
+
+        th {
+            text-align: right;
+        }
+
+        th.price {
+            border-top: solid thin;
+        }
     }
-    th {
-    text-align: right;
+
+    .empty {
+        background-color: red;
+        border-radius: 0.354em;
+        border: solid thin #441;
+        color: white;
+        font-size: 1em;
+        padding: 0.354em 1em;
     }
-    th.price {
-    border-top: solid thin;
-    }
-    }
-    button{
-    background-color: red;
-    border-radius: 0.354em;
-    border: solid thin #441;
-    color: white;
-    font-size: 1em;
-    padding: 0.354em 1em;
-    }
-    button:hover {
+
+    .empty:hover {
         background-color: rgb(68, 17, 30);
         font-size: 1.1em;
+        cursor: pointer;
     }
-    .total{
+
+    .total {
         position: relative;
         bottom: 9px;
     }
-    .Totalprice{
+
+    .Totalprice {
         color: red;
         font-size: 20px;
     }
+
+    .checkout {
+        background-color: rgb(62, 230, 56);
+        border-radius: 0.354em;
+        border: solid thin #441;
+        color: white;
+        font-size: 1em;
+        padding: 0.354em 1em;
     }
+
+    .checkout:hover {
+        background-color: rgb(40, 83, 11);
+        font-size: 1.1em;
+        cursor: pointer;
+    }
+}
